@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ConduitCraft AI — Visual ML & LLM Pipeline IDE</title>
-  <meta name="description" content="Open-source drag-and-drop IDE for building ML and LLM pipelines. Compose pipelines visually — ConduitCraft AI generates Python, Jupyter, Kubeflow DSL, and Dockerfiles from the flow." />
+  <meta name="description" content="Open-source drag-and-drop IDE for building ML and LLM pipelines. Compose pipelines visually — ConduitCraft AI generates Python, Jupyter, Kubeflow DSL, and Dockerfiles." />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -15,19 +16,21 @@
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
+      <!-- Small logo (icon only) -->
       <a href="#" class="nav-logo">
-        <span class="logo-mark">⬡</span>
-        <span class="logo-text">ConduitCraft <span class="logo-ai">AI</span></span>
+        <img src="icon.svg" alt="ConduitCraft AI icon" class="nav-icon" />
+        <span class="nav-brand">ConduitCraft <span class="brand-ai">AI</span></span>
       </a>
       <div class="nav-links">
         <a href="#features">Features</a>
+        <a href="#demo">Demo</a>
         <a href="#pipelines">Pipelines</a>
         <a href="#codegen">Code Gen</a>
         <a href="https://github.com/conduitcraft/conduitcraft.github.io" target="_blank" class="nav-gh">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
           GitHub
         </a>
-        <a href="#" class="btn-nav">Get Started</a>
+        <a href="https://github.com/conduitcraft/conduitcraft.github.io" target="_blank" class="btn-nav">Get Started</a>
       </div>
       <button class="nav-burger" id="burger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -35,6 +38,7 @@
     </div>
     <div class="nav-mobile" id="navMobile">
       <a href="#features">Features</a>
+      <a href="#demo">Demo</a>
       <a href="#pipelines">Pipelines</a>
       <a href="#codegen">Code Gen</a>
       <a href="https://github.com/conduitcraft/conduitcraft.github.io" target="_blank">GitHub</a>
@@ -43,139 +47,177 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-glow"></div>
+    <div class="hero-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
     <div class="hero-grid"></div>
-    <div class="container">
-      <div class="badge">Open Source · Apache 2.0</div>
+
+    <div class="container hero-container">
+      <!-- Large logo -->
+      <div class="hero-logo-wrap">
+        <img src="logo-large.svg" alt="ConduitCraft AI" class="hero-logo" />
+      </div>
+
+      <div class="hero-pill">
+        <span class="pill-dot"></span>
+        Open Source · Apache 2.0 · Visual AI Pipeline IDE
+      </div>
+
       <h1 class="hero-title">
-        Build ML & LLM Pipelines<br />
-        <span class="gradient-text">Visually. Ship Code.</span>
+        Design AI Pipelines.<br />
+        <span class="gradient-text">Ship Production Code.</span>
       </h1>
+
       <p class="hero-sub">
-        Drag nodes, connect them, configure — ConduitCraft AI generates executable
-        Python scripts, Jupyter notebooks, Kubeflow DSL, and Dockerfiles from your
-        visual flow.
+        Drag intelligent nodes onto a canvas, connect them with typed edges, and watch
+        ConduitCraft AI generate executable Python, Jupyter notebooks, Kubeflow DSL,
+        and Dockerfiles — no boilerplate, no guesswork.
       </p>
+
       <div class="hero-actions">
         <a href="https://github.com/conduitcraft/conduitcraft.github.io" class="btn-primary" target="_blank">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
           Star on GitHub
         </a>
-        <a href="#features" class="btn-ghost">See Features ↓</a>
+        <a href="#demo" class="btn-ghost">Watch Demo ↓</a>
       </div>
+
       <div class="hero-stats">
         <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Node Types</span></div>
         <div class="stat-divider"></div>
         <div class="stat"><span class="stat-num">4</span><span class="stat-label">Output Formats</span></div>
         <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Integrations</span></div>
-        <div class="stat-divider"></div>
         <div class="stat"><span class="stat-num">2</span><span class="stat-label">Pipeline Modes</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Integrations</span></div>
       </div>
     </div>
+  </section>
 
-    <!-- Canvas preview -->
-    <div class="canvas-preview">
-      <div class="canvas-window">
-        <div class="window-bar">
-          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-          <span class="window-title">ConduitCraft AI — RAG Pipeline</span>
-        </div>
-        <div class="canvas-body">
-          <!-- Simulated pipeline flow -->
-          <div class="pipeline-flow">
-            <div class="pnode ingest">
-              <div class="pnode-icon">📄</div>
-              <div class="pnode-label">PDF Loader</div>
-              <div class="pnode-tag ingest-tag">ingest</div>
-              <div class="pnode-handle out"></div>
-            </div>
-            <div class="pedge"></div>
-            <div class="pnode chunk">
-              <div class="pnode-icon">✂️</div>
-              <div class="pnode-label">Text Splitter</div>
-              <div class="pnode-tag chunk-tag">chunk</div>
-              <div class="pnode-handle in"></div>
-              <div class="pnode-handle out"></div>
-            </div>
-            <div class="pedge"></div>
-            <div class="pnode embed">
-              <div class="pnode-icon">🔢</div>
-              <div class="pnode-label">OpenAI Embed</div>
-              <div class="pnode-tag embed-tag">embed</div>
-              <div class="pnode-handle in"></div>
-              <div class="pnode-handle out"></div>
-            </div>
-            <div class="pedge"></div>
-            <div class="pnode vector">
-              <div class="pnode-icon">🗄️</div>
-              <div class="pnode-label">Chroma DB</div>
-              <div class="pnode-tag vector-tag">vectorstore</div>
-              <div class="pnode-handle in"></div>
-              <div class="pnode-handle out"></div>
-            </div>
-            <div class="pedge"></div>
-            <div class="pnode chain active-node">
-              <div class="pnode-icon">🔗</div>
-              <div class="pnode-label">RAG Chain</div>
-              <div class="pnode-tag chain-tag">chain</div>
-              <div class="pnode-handle in"></div>
-              <div class="pnode-handle out"></div>
-            </div>
+  <!-- DEMO VIDEO -->
+  <section class="section demo-section" id="demo">
+    <div class="container">
+      <div class="section-label">Live Demo</div>
+      <h2 class="section-title">See it in action</h2>
+      <p class="section-sub">Build a full RAG pipeline in minutes — from PDF ingestion to a deployed LangServe endpoint.</p>
+
+      <div class="video-wrap">
+        <div class="video-glow"></div>
+        <div class="video-frame">
+          <div class="window-bar">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <span class="window-title">ConduitCraft AI — Pipeline Demo</span>
           </div>
+          <video
+            controls
+            preload="metadata"
+            poster=""
+            class="demo-video"
+          >
+            <source src="demo.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FEATURES -->
-  <section class="section" id="features">
+  <section class="section section-alt" id="features">
     <div class="container">
       <div class="section-label">Features</div>
-      <h2 class="section-title">Everything you need to ship ML</h2>
-      <p class="section-sub">A complete visual IDE for the entire model lifecycle — from data ingestion to production deployment.</p>
+      <h2 class="section-title">Built for AI engineers</h2>
+      <p class="section-sub">Every feature is purpose-built for the ML and LLM development workflow — from first prototype to production deployment.</p>
 
       <div class="features-grid">
 
-        <div class="feature-card feature-large">
-          <div class="feature-icon">🎨</div>
-          <h3>Visual Pipeline Builder</h3>
-          <p>Drag nodes from the palette onto a React Flow canvas. Connect them with typed edges — only compatible port types can connect. Port validation runs in real time.</p>
+        <div class="feature-card feature-wide">
+          <div class="feature-accent"></div>
+          <div class="feature-icon-wrap purple">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17h7M17 14v7"/></svg>
+          </div>
+          <h3>Visual Pipeline Canvas</h3>
+          <p>Drag nodes from a categorised palette, connect them with colour-coded typed edges. Incompatible port types are blocked in real time — no runtime surprises.</p>
           <div class="feature-tags">
-            <span class="tag">Drag & Drop</span>
-            <span class="tag">Type Validation</span>
-            <span class="tag">React Flow</span>
+            <span class="tag tag-purple">React Flow</span>
+            <span class="tag tag-purple">Type Validation</span>
+            <span class="tag tag-purple">DAG Engine</span>
           </div>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">⚡</div>
+          <div class="feature-icon-wrap cyan">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
           <h3>Instant Code Generation</h3>
-          <p>One click generates Python scripts, Jupyter notebooks, Kubeflow DSL, or Dockerfiles — with all imports resolved and packages listed.</p>
+          <p>One click produces Python scripts, Jupyter notebooks, Kubeflow DSL, or Dockerfiles with all imports and packages resolved.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">🔌</div>
-          <h3>Plugin System</h3>
-          <p>Community plugins add new node types via an iframe sandbox and postMessage API — without touching the core codebase.</p>
+          <div class="feature-icon-wrap green">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <h3>Prompt Playground</h3>
+          <p>Test LLM prompts live in the Inspector. Stream responses token-by-token, save prompt versions, and pin the best one — all without leaving the canvas.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">📊</div>
+          <div class="feature-icon-wrap orange">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          </div>
           <h3>Inline Data Preview</h3>
-          <p>After a run, each node shows its output on the canvas card — DataFrame shape + mini table, model name, metrics, text.</p>
+          <p>After a run each node shows its output directly on the canvas card — DataFrame shape, model name, metrics list, or text preview. No Jupyter context-switch.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">🚀</div>
-          <h3>Local & Docker Execution</h3>
-          <p>Run pipelines locally or inside Docker with real-time WebSocket log streaming and per-node status indicators.</p>
+          <div class="feature-icon-wrap pink">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          </div>
+          <h3>RAG Retrieval Debugger</h3>
+          <p>Debug RAG chains without writing tracing code. See retrieved chunks with similarity scores, the assembled prompt, and the LLM response — side by side.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">🖥️</div>
-          <h3>Desktop App</h3>
-          <p>Electron wrapper with a PyInstaller-bundled FastAPI backend. No Python install required on the end-user machine.</p>
+          <div class="feature-icon-wrap blue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+          </div>
+          <h3>Experiment Leaderboard</h3>
+          <p>All past runs in a sortable metrics table. Compare any two runs with a config diff view — powered by MLflow or a local SQLite fallback.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap purple">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <h3>Secrets Vault</h3>
+          <p>API keys encrypted at rest with AES-256 Fernet. Referenced as <code>os.environ["KEY"]</code> in generated code — never hardcoded, never in plain localStorage.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap cyan">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <h3>A/B Split Nodes</h3>
+          <p>Fork ML or LLM pipelines into two parallel branches. Both run concurrently — results appear side-by-side in the Experiment Leaderboard for comparison.</p>
+        </div>
+
+        <div class="feature-card feature-wide">
+          <div class="feature-accent accent-cyan"></div>
+          <div class="feature-icon-wrap blue">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Cloud & Local Deployment</h3>
+          <p>Submit pipelines to Azure ML, run locally with your Python env, containerise with Docker, or package as a Kubeflow DSL — all from the same visual flow. AWS SageMaker and Google Vertex AI coming soon.</p>
+          <div class="feature-tags">
+            <span class="tag tag-cyan">Azure ML</span>
+            <span class="tag tag-cyan">Docker</span>
+            <span class="tag tag-cyan">Kubeflow</span>
+            <span class="tag tag-cyan">LangServe</span>
+          </div>
         </div>
 
       </div>
@@ -183,64 +225,46 @@
   </section>
 
   <!-- PIPELINES -->
-  <section class="section section-alt" id="pipelines">
+  <section class="section" id="pipelines">
     <div class="container">
       <div class="section-label">Pipeline Modes</div>
-      <h2 class="section-title">ML and LLM — one IDE</h2>
-      <p class="section-sub">Two purpose-built pipeline modes, each with their own palette and node categories.</p>
+      <h2 class="section-title">ML and LLMOps — one IDE</h2>
+      <p class="section-sub">Two purpose-built pipeline modes with dedicated node palettes, each covering the full lifecycle from raw data to deployed model.</p>
 
       <div class="pipelines-grid">
         <div class="pipeline-card">
           <div class="pipeline-header ml-header">
-            <span class="pipeline-mode-badge">ML Pipeline</span>
+            <div class="pipeline-badge-row">
+              <span class="pipeline-badge ml-badge">ML Pipeline</span>
+              <span class="pipeline-sub">scikit-learn · XGBoost · Keras · PyTorch</span>
+            </div>
           </div>
-          <div class="pipeline-flow-text">
-            <div class="flow-step">
-              <span class="flow-dot" style="background:#3b82f6"></span>
-              <div><strong>Data Ingestion</strong><p>CSV, Parquet, S3, Azure Blob, GCS, PostgreSQL, HuggingFace Datasets</p></div>
-            </div>
-            <div class="flow-arrow">↓</div>
-            <div class="flow-step">
-              <span class="flow-dot" style="background:#3b82f6"></span>
-              <div><strong>Transform</strong><p>Scaler, Encoder, Filter, Splitter, Outlier Removal</p></div>
-            </div>
-            <div class="flow-arrow">↓</div>
-            <div class="flow-step">
-              <span class="flow-dot" style="background:#a855f7"></span>
-              <div><strong>Train</strong><p>scikit-learn, XGBoost, Keras, PyTorch, PyTorch Lightning</p></div>
-            </div>
-            <div class="flow-arrow">↓</div>
-            <div class="flow-step">
-              <span class="flow-dot" style="background:#f97316"></span>
-              <div><strong>Evaluate → Deploy → Monitor</strong><p>MLflow, Kubeflow, HuggingFace Hub, Docker, Evidently</p></div>
-            </div>
+          <div class="pipeline-steps">
+            <div class="pstep"><span class="pstep-dot" style="background:#3b82f6"></span><div><strong>Data Ingestion</strong><p>CSV, Parquet, S3, Azure Blob, GCS, PostgreSQL, HuggingFace Datasets</p></div></div>
+            <div class="pstep-connector"></div>
+            <div class="pstep"><span class="pstep-dot" style="background:#6366f1"></span><div><strong>Transform</strong><p>Scaler, Encoder, Filter, Outlier Removal, Train/Test Split</p></div></div>
+            <div class="pstep-connector"></div>
+            <div class="pstep"><span class="pstep-dot" style="background:#a855f7"></span><div><strong>Train</strong><p>Random Forest, XGBoost, Gradient Boosting, Keras CNN, PyTorch Trainer</p></div></div>
+            <div class="pstep-connector"></div>
+            <div class="pstep"><span class="pstep-dot" style="background:#f97316"></span><div><strong>Evaluate → Deploy → Monitor</strong><p>MLflow Registry · Kubeflow Serving · Docker · HuggingFace Hub · Evidently</p></div></div>
           </div>
         </div>
 
         <div class="pipeline-card">
           <div class="pipeline-header llm-header">
-            <span class="pipeline-mode-badge">LLM Pipeline</span>
+            <div class="pipeline-badge-row">
+              <span class="pipeline-badge llm-badge">LLM Pipeline</span>
+              <span class="pipeline-sub">LangChain · LangGraph · LlamaIndex</span>
+            </div>
           </div>
-          <div class="pipeline-flow-text">
-            <div class="flow-step">
-              <span class="flow-dot" style="background:#22c55e"></span>
-              <div><strong>Ingest → Chunk → Embed</strong><p>PDF, Web, S3 · Recursive Splitter · OpenAI, HuggingFace, Ollama</p></div>
-            </div>
-            <div class="flow-arrow">↓</div>
-            <div class="flow-step">
-              <span class="flow-dot" style="background:#14b8a6"></span>
-              <div><strong>Vector Store</strong><p>Chroma, FAISS, Pinecone, Weaviate, pgvector</p></div>
-            </div>
-            <div class="flow-arrow">↓</div>
-            <div class="flow-step">
-              <span class="flow-dot" style="background:#a855f7"></span>
-              <div><strong>LLM</strong><p>OpenAI, Anthropic Claude, Ollama (local), vLLM, HuggingFace Inference</p></div>
-            </div>
-            <div class="flow-arrow">↓</div>
-            <div class="flow-step">
-              <span class="flow-dot" style="background:#ec4899"></span>
-              <div><strong>Chain / Agent → Deploy</strong><p>LangChain, LangGraph, LlamaIndex · LangServe, FastAPI</p></div>
-            </div>
+          <div class="pipeline-steps">
+            <div class="pstep"><span class="pstep-dot" style="background:#22c55e"></span><div><strong>Ingest → Chunk → Embed</strong><p>PDF, Web, S3 Docs · Recursive Splitter · OpenAI / HuggingFace / Ollama</p></div></div>
+            <div class="pstep-connector"></div>
+            <div class="pstep"><span class="pstep-dot" style="background:#14b8a6"></span><div><strong>Vector Store</strong><p>Chroma, FAISS, Pinecone, Weaviate, pgvector</p></div></div>
+            <div class="pstep-connector"></div>
+            <div class="pstep"><span class="pstep-dot" style="background:#a855f7"></span><div><strong>LLM</strong><p>OpenAI GPT-4o · Anthropic Claude · Ollama (local) · vLLM · HuggingFace</p></div></div>
+            <div class="pstep-connector"></div>
+            <div class="pstep"><span class="pstep-dot" style="background:#ec4899"></span><div><strong>Chain / Agent → Deploy</strong><p>RAG Chain · ReAct Agent · LangGraph Workflow · LangServe · FastAPI</p></div></div>
           </div>
         </div>
       </div>
@@ -248,11 +272,11 @@
   </section>
 
   <!-- CODE GEN -->
-  <section class="section" id="codegen">
+  <section class="section section-alt" id="codegen">
     <div class="container">
       <div class="section-label">Code Generation</div>
-      <h2 class="section-title">Visual flow → executable code</h2>
-      <p class="section-sub">The pipeline is the single source of truth. The backend topologically sorts your DAG, renders Jinja2 templates per node, and assembles four output formats.</p>
+      <h2 class="section-title">Visual flow → production-ready code</h2>
+      <p class="section-sub">The pipeline is the single source of truth. Topological sort → Jinja2 template render per node → assembled output in your chosen format.</p>
 
       <div class="codegen-layout">
         <div class="codegen-tabs">
@@ -268,17 +292,15 @@
             <span class="code-badge">Python</span>
           </div>
           <pre><code><span class="c"># Auto-generated by ConduitCraft AI</span>
-<span class="c"># Required: pandas scikit-learn langchain chromadb</span>
+<span class="c"># pip install pandas scikit-learn mlflow</span>
 
 <span class="k">import</span> pandas <span class="k">as</span> pd
 <span class="k">from</span> sklearn.preprocessing <span class="k">import</span> StandardScaler
 <span class="k">from</span> sklearn.ensemble <span class="k">import</span> RandomForestClassifier
-<span class="k">from</span> sklearn.metrics <span class="k">import</span> classification_report
 <span class="k">import</span> mlflow
 
 <span class="k">def</span> <span class="fn">ingest_csv</span>():
-    df = pd.read_csv(<span class="s">"data/iris.csv"</span>)
-    <span class="k">return</span> df
+    <span class="k">return</span> pd.read_csv(<span class="s">"data/iris.csv"</span>)
 
 <span class="k">def</span> <span class="fn">transform_scaler</span>(df):
     scaler = StandardScaler()
@@ -303,52 +325,54 @@
             <span class="code-lang">pipeline.ipynb</span>
             <span class="code-badge">Jupyter</span>
           </div>
-          <pre><code><span class="c"># Cell 1 — Ingest CSV</span>
+          <pre><code><span class="c"># ── Cell 1: Ingest CSV ──────────────────────</span>
 <span class="k">import</span> pandas <span class="k">as</span> pd
 df = pd.read_csv(<span class="s">"data/iris.csv"</span>)
 df.head()
 
-<span class="c"># Cell 2 — Standard Scaler</span>
+<span class="c"># ── Cell 2: Standard Scaler ─────────────────</span>
 <span class="k">from</span> sklearn.preprocessing <span class="k">import</span> StandardScaler
 scaler = StandardScaler()
 X = scaler.fit_transform(df.drop(<span class="s">"species"</span>, axis=<span class="n">1</span>))
 y = df[<span class="s">"species"</span>]
+print(<span class="s">f"Shape: {X.shape}"</span>)
 
-<span class="c"># Cell 3 — Train Random Forest</span>
+<span class="c"># ── Cell 3: Train Random Forest ─────────────</span>
 <span class="k">from</span> sklearn.ensemble <span class="k">import</span> RandomForestClassifier
 <span class="k">import</span> mlflow
 <span class="k">with</span> mlflow.start_run():
     model = RandomForestClassifier(n_estimators=<span class="n">100</span>)
     model.fit(X, y)
-    mlflow.sklearn.log_model(model, <span class="s">"model"</span>)</code></pre>
+    mlflow.sklearn.log_model(model, <span class="s">"model"</span>)
+    print(<span class="s">"✓ Model logged to MLflow"</span>)</code></pre>
         </div>
 
         <div class="code-block hidden" id="tab-kubeflow">
           <div class="code-header">
             <span class="code-lang">pipeline_kubeflow.py</span>
-            <span class="code-badge">Kubeflow DSL</span>
+            <span class="code-badge">Kubeflow v2 DSL</span>
           </div>
           <pre><code><span class="k">from</span> kfp <span class="k">import</span> dsl
 <span class="k">from</span> kfp.dsl <span class="k">import</span> component, pipeline
 
-<span class="k">@component</span>(packages_to_install=[<span class="s">"pandas"</span>])
-<span class="k">def</span> <span class="fn">ingest_csv</span>() -> str:
+<span class="k">@component</span>(packages_to_install=[<span class="s">"pandas==2.2.0"</span>])
+<span class="k">def</span> <span class="fn">ingest_csv</span>(output: dsl.Output[dsl.Dataset]):
     <span class="k">import</span> pandas <span class="k">as</span> pd
     df = pd.read_csv(<span class="s">"data/iris.csv"</span>)
-    <span class="k">return</span> df.to_json()
+    df.to_csv(output.path, index=<span class="n">False</span>)
 
-<span class="k">@component</span>(packages_to_install=[<span class="s">"scikit-learn"</span>])
-<span class="k">def</span> <span class="fn">train_model</span>(data: str) -> str:
+<span class="k">@component</span>(packages_to_install=[<span class="s">"scikit-learn==1.4.0"</span>])
+<span class="k">def</span> <span class="fn">train_model</span>(dataset: dsl.Input[dsl.Dataset],
+               model_out: dsl.Output[dsl.Model]):
+    <span class="k">import</span> pandas <span class="k">as</span> pd
     <span class="k">from</span> sklearn.ensemble <span class="k">import</span> RandomForestClassifier
-    <span class="k">import</span> pandas <span class="k">as</span> pd, json
-    df = pd.read_json(data)
-    model = RandomForestClassifier()
-    <span class="c"># ... train and return model path</span>
+    df = pd.read_csv(dataset.path)
+    <span class="c"># ... train and save</span>
 
 <span class="k">@pipeline</span>(name=<span class="s">"iris-classification"</span>)
 <span class="k">def</span> <span class="fn">iris_pipeline</span>():
     ingest = ingest_csv()
-    train = train_model(data=ingest.output)</code></pre>
+    train_model(dataset=ingest.outputs[<span class="s">"output"</span>])</code></pre>
         </div>
 
         <div class="code-block hidden" id="tab-docker">
@@ -368,36 +392,34 @@ y = df[<span class="s">"species"</span>]
 
 <span class="k">CMD</span> [<span class="s">"python"</span>, <span class="s">"pipeline.py"</span>]
 
-<span class="c">---  requirements.txt  ---</span>
-pandas==2.2.0
+<span class="c">## requirements.txt (auto-generated)</span>
+<span class="s">pandas==2.2.0
 scikit-learn==1.4.0
-mlflow==2.11.0
-langchain==0.1.0
-chromadb==0.4.22</code></pre>
+mlflow==2.11.0</span></code></pre>
         </div>
       </div>
     </div>
   </section>
 
   <!-- INTEGRATIONS -->
-  <section class="section section-alt" id="integrations">
+  <section class="section" id="integrations">
     <div class="container">
       <div class="section-label">Integrations</div>
-      <h2 class="section-title">Connects to your MLOps stack</h2>
-      <p class="section-sub">Built-in support for the tools you already use — all configurable from the Integrations panel.</p>
+      <h2 class="section-title">Connects to your AI stack</h2>
+      <p class="section-sub">Native support for the tools and platforms you already use — configured once in the Integrations panel, applied everywhere.</p>
       <div class="integrations-grid">
-        <div class="integration-card"><span class="int-icon">🔬</span><span>MLflow</span></div>
-        <div class="integration-card"><span class="int-icon">☸️</span><span>Kubeflow</span></div>
-        <div class="integration-card"><span class="int-icon">🤗</span><span>HuggingFace</span></div>
-        <div class="integration-card"><span class="int-icon">🟢</span><span>OpenAI</span></div>
-        <div class="integration-card"><span class="int-icon">🟣</span><span>Anthropic</span></div>
-        <div class="integration-card"><span class="int-icon">🦙</span><span>Ollama</span></div>
-        <div class="integration-card"><span class="int-icon">☁️</span><span>Azure ML</span></div>
-        <div class="integration-card"><span class="int-icon">🪣</span><span>AWS S3</span></div>
-        <div class="integration-card"><span class="int-icon">📦</span><span>Azure Blob</span></div>
-        <div class="integration-card"><span class="int-icon">🐘</span><span>PostgreSQL</span></div>
-        <div class="integration-card"><span class="int-icon">📌</span><span>Pinecone</span></div>
-        <div class="integration-card"><span class="int-icon">🌿</span><span>MongoDB</span></div>
+        <div class="int-card"><span class="int-icon">🔬</span><span class="int-name">MLflow</span><span class="int-desc">Experiment tracking</span></div>
+        <div class="int-card"><span class="int-icon">☸️</span><span class="int-name">Kubeflow</span><span class="int-desc">Pipeline orchestration</span></div>
+        <div class="int-card"><span class="int-icon">🤗</span><span class="int-name">HuggingFace</span><span class="int-desc">Models & datasets</span></div>
+        <div class="int-card"><span class="int-icon">🟢</span><span class="int-name">OpenAI</span><span class="int-desc">GPT-4o & embeddings</span></div>
+        <div class="int-card"><span class="int-icon">🟣</span><span class="int-name">Anthropic</span><span class="int-desc">Claude models</span></div>
+        <div class="int-card"><span class="int-icon">🦙</span><span class="int-name">Ollama</span><span class="int-desc">Local LLMs</span></div>
+        <div class="int-card"><span class="int-icon">☁️</span><span class="int-name">Azure ML</span><span class="int-desc">Cloud deployment</span></div>
+        <div class="int-card"><span class="int-icon">🪣</span><span class="int-name">AWS S3</span><span class="int-desc">Data storage</span></div>
+        <div class="int-card"><span class="int-icon">📌</span><span class="int-name">Pinecone</span><span class="int-desc">Vector database</span></div>
+        <div class="int-card"><span class="int-icon">🌊</span><span class="int-name">Chroma</span><span class="int-desc">Local vector store</span></div>
+        <div class="int-card"><span class="int-icon">🐘</span><span class="int-name">PostgreSQL</span><span class="int-desc">Structured data</span></div>
+        <div class="int-card"><span class="int-icon">📊</span><span class="int-name">Evidently</span><span class="int-desc">Model monitoring</span></div>
       </div>
     </div>
   </section>
@@ -406,15 +428,18 @@ chromadb==0.4.22</code></pre>
   <section class="section cta-section">
     <div class="container">
       <div class="cta-card">
-        <div class="cta-glow"></div>
-        <h2>Start building pipelines today</h2>
-        <p>Open source. Apache 2.0. No cloud account required.</p>
+        <div class="cta-orb cta-orb-1"></div>
+        <div class="cta-orb cta-orb-2"></div>
+        <!-- Small icon in CTA -->
+        <img src="icon.svg" alt="" class="cta-icon" />
+        <h2>Start building AI pipelines today</h2>
+        <p>Open source. Apache 2.0. Runs entirely on your machine.</p>
         <div class="cta-actions">
           <a href="https://github.com/conduitcraft/conduitcraft.github.io" class="btn-primary" target="_blank">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.013-1.703-2.782.603-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
             View on GitHub
           </a>
-          <a href="#features" class="btn-outline">Read the Docs</a>
+          <a href="#features" class="btn-outline">Explore Features</a>
         </div>
       </div>
     </div>
@@ -425,13 +450,13 @@ chromadb==0.4.22</code></pre>
     <div class="container">
       <div class="footer-inner">
         <div class="footer-brand">
-          <span class="logo-mark">⬡</span>
-          <span class="logo-text">ConduitCraft <span class="logo-ai">AI</span></span>
+          <img src="icon.svg" alt="" class="footer-icon" />
+          <span>ConduitCraft <span class="brand-ai">AI</span></span>
         </div>
         <div class="footer-links">
           <a href="https://github.com/conduitcraft/conduitcraft.github.io" target="_blank">GitHub</a>
-          <a href="#">Documentation</a>
-          <a href="#">Apache 2.0</a>
+          <a href="#features">Features</a>
+          <a href="#demo">Demo</a>
         </div>
         <p class="footer-copy">© 2026 ConduitCraft AI. Open source under Apache 2.0.</p>
       </div>
