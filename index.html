@@ -16,7 +16,6 @@
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
-      <!-- Small logo (icon only) -->
       <a href="#" class="nav-logo">
         <img src="icon.svg" alt="ConduitCraft AI icon" class="nav-icon" />
         <span class="nav-brand">ConduitCraft <span class="brand-ai">AI</span></span>
@@ -55,7 +54,6 @@
     <div class="hero-grid"></div>
 
     <div class="container hero-container">
-      <!-- Large logo -->
       <div class="hero-logo-wrap">
         <img src="logo-large.svg" alt="ConduitCraft AI" class="hero-logo" />
       </div>
@@ -102,7 +100,6 @@
       <div class="section-label">Live Demo</div>
       <h2 class="section-title">See it in action</h2>
       <p class="section-sub">Build a full RAG pipeline in minutes — from PDF ingestion to a deployed LangServe endpoint.</p>
-
       <div class="video-wrap">
         <div class="video-glow"></div>
         <div class="video-frame">
@@ -112,12 +109,7 @@
             <span class="dot green"></span>
             <span class="window-title">ConduitCraft AI — Pipeline Demo</span>
           </div>
-          <video
-            controls
-            preload="metadata"
-            poster=""
-            class="demo-video"
-          >
+          <video controls preload="metadata" class="demo-video">
             <source src="demo.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
@@ -141,7 +133,7 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 17h7M17 14v7"/></svg>
           </div>
           <h3>Visual Pipeline Canvas</h3>
-          <p>Drag nodes from a categorised palette, connect them with colour-coded typed edges. Incompatible port types are blocked in real time — no runtime surprises.</p>
+          <p>Drag nodes from a categorised palette onto a React Flow canvas. Connect them with colour-coded typed edges — incompatible port types are blocked at draw time. No runtime surprises, no boilerplate setup.</p>
           <div class="feature-tags">
             <span class="tag tag-purple">React Flow</span>
             <span class="tag tag-purple">Type Validation</span>
@@ -153,16 +145,8 @@
           <div class="feature-icon-wrap cyan">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
-          <h3>Instant Code Generation</h3>
-          <p>One click produces Python scripts, Jupyter notebooks, Kubeflow DSL, or Dockerfiles with all imports and packages resolved.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap green">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          </div>
-          <h3>Prompt Playground</h3>
-          <p>Test LLM prompts live in the Inspector. Stream responses token-by-token, save prompt versions, and pin the best one — all without leaving the canvas.</p>
+          <h3>Code Generation</h3>
+          <p>One click produces Python scripts, Jupyter notebooks, Kubeflow v2 DSL, or Dockerfiles with all imports and pip packages resolved and listed automatically.</p>
         </div>
 
         <div class="feature-card">
@@ -170,53 +154,53 @@
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
           </div>
           <h3>Inline Data Preview</h3>
-          <p>After a run each node shows its output directly on the canvas card — DataFrame shape, model name, metrics list, or text preview. No Jupyter context-switch.</p>
+          <p>After a run each node shows its output directly on the canvas card — DataFrame shape + mini table, model class name, metrics, or text preview. No Jupyter context-switch.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon-wrap pink">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          <div class="feature-icon-wrap green">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
           </div>
-          <h3>RAG Retrieval Debugger</h3>
-          <p>Debug RAG chains without writing tracing code. See retrieved chunks with similarity scores, the assembled prompt, and the LLM response — side by side.</p>
+          <h3>Data Connectors</h3>
+          <p>Built-in ingest nodes for local files, AWS S3, Azure Blob, GCS, PostgreSQL, and HuggingFace Datasets — with Test Connection and live row preview in the Inspector.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon-wrap blue">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
-          <h3>Experiment Leaderboard</h3>
-          <p>All past runs in a sortable metrics table. Compare any two runs with a config diff view — powered by MLflow or a local SQLite fallback.</p>
+          <h3>Pipeline Execution</h3>
+          <p>Run locally with your Python environment or inside Docker. Real-time WebSocket log streaming with per-node status badges — running, success, or failed — visible on the canvas.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrap pink">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          </div>
+          <h3>Port Type Validation</h3>
+          <p>Every edge is typed — DataFrame, Model, Embeddings, VectorStore, Text, Metrics, or Any. Incompatible handles dim automatically. The Validate button scans the whole pipeline in one click.</p>
         </div>
 
         <div class="feature-card">
           <div class="feature-icon-wrap purple">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
           </div>
-          <h3>Secrets Vault</h3>
-          <p>API keys encrypted at rest with AES-256 Fernet. Referenced as <code>os.environ["KEY"]</code> in generated code — never hardcoded, never in plain localStorage.</p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon-wrap cyan">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </div>
-          <h3>A/B Split Nodes</h3>
-          <p>Fork ML or LLM pipelines into two parallel branches. Both run concurrently — results appear side-by-side in the Experiment Leaderboard for comparison.</p>
+          <h3>Plugin System</h3>
+          <p>Community plugins add new node types and connectors via a manifest-first, iframe sandbox model — communicate with the host using a postMessage API, no core changes needed.</p>
         </div>
 
         <div class="feature-card feature-wide">
           <div class="feature-accent accent-cyan"></div>
           <div class="feature-icon-wrap blue">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
           </div>
-          <h3>Cloud & Local Deployment</h3>
-          <p>Submit pipelines to Azure ML, run locally with your Python env, containerise with Docker, or package as a Kubeflow DSL — all from the same visual flow. AWS SageMaker and Google Vertex AI coming soon.</p>
+          <h3>Desktop App</h3>
+          <p>An Electron wrapper bundles the FastAPI backend as a self-contained PyInstaller executable for Windows, macOS, and Linux. No Python install required on the end-user machine — just download and run.</p>
           <div class="feature-tags">
-            <span class="tag tag-cyan">Azure ML</span>
-            <span class="tag tag-cyan">Docker</span>
-            <span class="tag tag-cyan">Kubeflow</span>
-            <span class="tag tag-cyan">LangServe</span>
+            <span class="tag tag-cyan">Windows</span>
+            <span class="tag tag-cyan">macOS</span>
+            <span class="tag tag-cyan">Linux</span>
+            <span class="tag tag-cyan">Electron 33</span>
           </div>
         </div>
 
@@ -240,13 +224,25 @@
             </div>
           </div>
           <div class="pipeline-steps">
-            <div class="pstep"><span class="pstep-dot" style="background:#3b82f6"></span><div><strong>Data Ingestion</strong><p>CSV, Parquet, S3, Azure Blob, GCS, PostgreSQL, HuggingFace Datasets</p></div></div>
+            <div class="pstep">
+              <span class="pstep-dot" style="background:#3b82f6"></span>
+              <div><strong>Data Ingestion</strong><p>CSV, Parquet, S3, Azure Blob, GCS, PostgreSQL, HuggingFace Datasets</p></div>
+            </div>
             <div class="pstep-connector"></div>
-            <div class="pstep"><span class="pstep-dot" style="background:#6366f1"></span><div><strong>Transform</strong><p>Scaler, Encoder, Filter, Outlier Removal, Train/Test Split</p></div></div>
+            <div class="pstep">
+              <span class="pstep-dot" style="background:#6366f1"></span>
+              <div><strong>Transform</strong><p>Standard Scaler, Encoder, Column Filter, Outlier Removal, Train/Test Split</p></div>
+            </div>
             <div class="pstep-connector"></div>
-            <div class="pstep"><span class="pstep-dot" style="background:#a855f7"></span><div><strong>Train</strong><p>Random Forest, XGBoost, Gradient Boosting, Keras CNN, PyTorch Trainer</p></div></div>
+            <div class="pstep">
+              <span class="pstep-dot" style="background:#a855f7"></span>
+              <div><strong>Train</strong><p>Random Forest, XGBoost, Gradient Boosting, Logistic Regression, Keras CNN, PyTorch Trainer</p></div>
+            </div>
             <div class="pstep-connector"></div>
-            <div class="pstep"><span class="pstep-dot" style="background:#f97316"></span><div><strong>Evaluate → Deploy → Monitor</strong><p>MLflow Registry · Kubeflow Serving · Docker · HuggingFace Hub · Evidently</p></div></div>
+            <div class="pstep">
+              <span class="pstep-dot" style="background:#f97316"></span>
+              <div><strong>Evaluate → Deploy → Monitor</strong><p>Classification & Regression Metrics · MLflow Registry · HuggingFace Hub · Docker · Evidently Drift</p></div>
+            </div>
           </div>
         </div>
 
@@ -258,13 +254,25 @@
             </div>
           </div>
           <div class="pipeline-steps">
-            <div class="pstep"><span class="pstep-dot" style="background:#22c55e"></span><div><strong>Ingest → Chunk → Embed</strong><p>PDF, Web, S3 Docs · Recursive Splitter · OpenAI / HuggingFace / Ollama</p></div></div>
+            <div class="pstep">
+              <span class="pstep-dot" style="background:#22c55e"></span>
+              <div><strong>Ingest → Chunk → Embed</strong><p>PDF, Web Pages, S3 Docs · Recursive Text Splitter · OpenAI / HuggingFace / Ollama Embeddings</p></div>
+            </div>
             <div class="pstep-connector"></div>
-            <div class="pstep"><span class="pstep-dot" style="background:#14b8a6"></span><div><strong>Vector Store</strong><p>Chroma, FAISS, Pinecone, Weaviate, pgvector</p></div></div>
+            <div class="pstep">
+              <span class="pstep-dot" style="background:#14b8a6"></span>
+              <div><strong>Vector Store</strong><p>Chroma, FAISS, Pinecone, Weaviate, pgvector</p></div>
+            </div>
             <div class="pstep-connector"></div>
-            <div class="pstep"><span class="pstep-dot" style="background:#a855f7"></span><div><strong>LLM</strong><p>OpenAI GPT-4o · Anthropic Claude · Ollama (local) · vLLM · HuggingFace</p></div></div>
+            <div class="pstep">
+              <span class="pstep-dot" style="background:#a855f7"></span>
+              <div><strong>LLM</strong><p>OpenAI GPT-4o · Anthropic Claude · Ollama (local) · vLLM · HuggingFace Inference</p></div>
+            </div>
             <div class="pstep-connector"></div>
-            <div class="pstep"><span class="pstep-dot" style="background:#ec4899"></span><div><strong>Chain / Agent → Deploy</strong><p>RAG Chain · ReAct Agent · LangGraph Workflow · LangServe · FastAPI</p></div></div>
+            <div class="pstep">
+              <span class="pstep-dot" style="background:#ec4899"></span>
+              <div><strong>Chain / Agent → Deploy</strong><p>RAG Chain · ReAct Agent · LangGraph Workflow · LlamaIndex Query · LangServe · FastAPI</p></div>
+            </div>
           </div>
         </div>
       </div>
@@ -367,7 +375,7 @@ print(<span class="s">f"Shape: {X.shape}"</span>)
     <span class="k">import</span> pandas <span class="k">as</span> pd
     <span class="k">from</span> sklearn.ensemble <span class="k">import</span> RandomForestClassifier
     df = pd.read_csv(dataset.path)
-    <span class="c"># ... train and save</span>
+    <span class="c"># ... train and save model</span>
 
 <span class="k">@pipeline</span>(name=<span class="s">"iris-classification"</span>)
 <span class="k">def</span> <span class="fn">iris_pipeline</span>():
@@ -414,12 +422,12 @@ mlflow==2.11.0</span></code></pre>
         <div class="int-card"><span class="int-icon">🟢</span><span class="int-name">OpenAI</span><span class="int-desc">GPT-4o & embeddings</span></div>
         <div class="int-card"><span class="int-icon">🟣</span><span class="int-name">Anthropic</span><span class="int-desc">Claude models</span></div>
         <div class="int-card"><span class="int-icon">🦙</span><span class="int-name">Ollama</span><span class="int-desc">Local LLMs</span></div>
-        <div class="int-card"><span class="int-icon">☁️</span><span class="int-name">Azure ML</span><span class="int-desc">Cloud deployment</span></div>
         <div class="int-card"><span class="int-icon">🪣</span><span class="int-name">AWS S3</span><span class="int-desc">Data storage</span></div>
-        <div class="int-card"><span class="int-icon">📌</span><span class="int-name">Pinecone</span><span class="int-desc">Vector database</span></div>
-        <div class="int-card"><span class="int-icon">🌊</span><span class="int-name">Chroma</span><span class="int-desc">Local vector store</span></div>
+        <div class="int-card"><span class="int-icon">📦</span><span class="int-name">Azure Blob</span><span class="int-desc">Cloud storage</span></div>
+        <div class="int-card"><span class="int-icon">🌩️</span><span class="int-name">GCS</span><span class="int-desc">Google Cloud Storage</span></div>
         <div class="int-card"><span class="int-icon">🐘</span><span class="int-name">PostgreSQL</span><span class="int-desc">Structured data</span></div>
         <div class="int-card"><span class="int-icon">📊</span><span class="int-name">Evidently</span><span class="int-desc">Model monitoring</span></div>
+        <div class="int-card"><span class="int-icon">🔗</span><span class="int-name">LangServe</span><span class="int-desc">LLM deployment</span></div>
       </div>
     </div>
   </section>
@@ -430,7 +438,6 @@ mlflow==2.11.0</span></code></pre>
       <div class="cta-card">
         <div class="cta-orb cta-orb-1"></div>
         <div class="cta-orb cta-orb-2"></div>
-        <!-- Small icon in CTA -->
         <img src="icon.svg" alt="" class="cta-icon" />
         <h2>Start building AI pipelines today</h2>
         <p>Open source. Apache 2.0. Runs entirely on your machine.</p>
