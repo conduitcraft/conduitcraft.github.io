@@ -616,6 +616,94 @@ code { font-family: inherit; background: none; padding: 0; border-radius: 0; col
 .int-name { font-size: .78rem; font-weight: 600; color: var(--text); }
 .int-desc { font-size: .66rem; color: var(--text-muted); text-align: center; }
 
+/* ── Download ──────────────────────────────────────────────── */
+.download-version-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: .82rem;
+  color: var(--text-dim);
+  background: rgba(124,58,237,.08);
+  border: 1px solid rgba(124,58,237,.2);
+  border-radius: 999px;
+  padding: 6px 16px;
+  margin-bottom: 40px;
+}
+.download-release-link {
+  color: var(--primary-2);
+  transition: color .15s;
+}
+.download-release-link:hover { color: #fff; }
+
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.download-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 22px;
+  background: var(--surface);
+  border: 1px solid var(--border-2);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: transform .15s, border-color .2s, box-shadow .2s;
+  text-decoration: none;
+  color: var(--text);
+}
+.download-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(124,58,237,.45);
+  box-shadow: 0 8px 32px rgba(124,58,237,.18);
+}
+.download-os-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(124,58,237,.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-2);
+}
+.download-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+.download-os {
+  font-size: .95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.download-file {
+  font-size: .72rem;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--primary-2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.download-arch {
+  font-size: .72rem;
+  color: var(--text-muted);
+}
+.download-arrow {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  transition: color .15s, transform .15s;
+}
+.download-card:hover .download-arrow {
+  color: var(--primary-2);
+  transform: translateY(2px);
+}
+
 /* ── CTA ───────────────────────────────────────────────────── */
 .cta-section { background: var(--bg); padding-bottom: 80px; }
 .cta-card {
